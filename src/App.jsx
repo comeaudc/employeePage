@@ -3,14 +3,15 @@ import HomePage from './components/HomePage/HomePage';
 import EmployeePage from './components/EmployeePage/EmployeePage';
 
 function App() {
-  
 
   return (
     <main>
-      <HomePage />
+      <HomePage/>
       <EmployeePage />
     </main>
   )
 }
 
 export default App
+
+

@@ -53,6 +53,15 @@ const employeeList = [
       SMS: '000-000-0000',
       email: 'me@me.com',
     },
+    {
+      firstName: 'Dylan',
+      lastName: 'Comeau',
+      jobTitle: 'Exterminator',
+      officeNum: '000-000-0000',
+      mobileNum: '000-000-0000',
+      SMS: '000-000-0000',
+      email: 'me@me.com',
+    },
   ];
   
   

@@ -1,17 +1,23 @@
 import EmployeeListItem from '../EmployeeListItem/EmployeeListItem';
-import employeeList from '../../utilities/data.mjs';
+import { useEmployee } from '../../contexts/employeeContext';
 
 function EmployeeList() {
-    
-  let list = employeeList.map((emp) => {
-    return <EmployeeListItem employee={emp} />;
+  const { setCurrent, employeeList } = useEmployee();
+
+  let list = employeeList.map((emp, i) => {
+    return (
+      <li
+        onClick={() => {
+          setCurrent(emp);
+        }}
+        key={i}
+      >
+        <EmployeeListItem age={31} employee={emp} />
+      </li>
+    );
   });
 
-  return (
-    <ul>
-      {list}
-    </ul>
-  );
+  return <ul>{employeeList.length > 0 ? list : <h3>Nothing to Load</h3>}</ul>;
 }
 
 export default EmployeeList;
